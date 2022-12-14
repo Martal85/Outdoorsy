@@ -8,6 +8,6 @@ The HTML report can be found in the project's folder under reports > index.html.
 
 Steps to run tests:
 
-Download and unzip the cypress.zip
+Clone the repo
 Paste the files in their respective places
 Run the test files using npm run cypress:run in headless mode or npm run cypress:open with Cypress GUI or open cmd in the cypress folder and type npx cypress run
