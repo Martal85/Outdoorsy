@@ -7,6 +7,19 @@ The tests can be found under e2e folder. Paje objects can be found under support
 
 The HTML report can be found in the project's folder under reports > index.html.
 
+Prerequisites:
+
+Latest NodeJS
+Installed latest Cypress v12
+Installed cypress-mochawesome-reporter
+
+Framework details:
+
+App URL: https://www.demoblaze.com/
+Framework and language: Cypress + mocha + js
+Language and model: page object model + js
+Reporter: cypress-mochawesome-reporter
+
 Steps to run tests:
 
 1.Clone the repo
@@ -14,4 +27,5 @@ Steps to run tests:
 2.Paste the files in their respective places
 
 3.Run the test files using npm run cypress:run in headless mode or npm run cypress:open with Cypress GUI or open cmd in the cypress folder and type npx cypress run
+
 
