@@ -6,15 +6,18 @@ export class ImagePage {
     }
 
     closePic(){
-      cy.get(this.closeImageButton).click({ force: true })
+      cy.get(this.closeImageButton,{ timeout: 10000 })
+        .click({ force: true })
     }
     
     popUpIsOpen() {
-      cy.get(this.popUp).should('exist')
+      cy.get(this.popUp)
+        .should('exist')
     }
 
     popUpIsClosed() {
-      cy.get(this.popUp).should('not.exist')
+      cy.get(this.popUp)
+        .should('not.exist')
     }
       
 }

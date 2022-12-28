@@ -7,15 +7,13 @@ export class CheckoutPage {
       this.searchButton = '[data-testid="apply-filter-button"]';
       this.listOfVechicles = '.SearchPageLayoutstyles__ResultWrapper-sc-aptfzg-0';
       this.vechiclePresentation = '.PageContentstyles__ContentWrapper-sc-11a3eb4-0';
-
-      }
+  }
   
 
   checkTitleEq(value) {
     cy.title().should('eq', value)
   }
   
-
   selectDates(date1, date2) {
     cy.get(this.dateFieldValue).contains('Add dates').click()
 
@@ -75,6 +73,7 @@ export class CheckoutPage {
   }
 
   checkQueryParametersAfterSearch(date1, date2, value1) {
+    cy.url().should('contain', value1)
     cy.url({ timeout: 10000 }).then(url => {
     let arr = url.split('&');
     let paramObj = {};
@@ -101,9 +100,6 @@ export class CheckoutPage {
   selectVechicleFromSearchResults(value) {
     cy.get(this.vechiclePresentation).contains(value).click({ force: true })
   }
-
-
-  
 }
 
 export const checkoutPage = new CheckoutPage();
