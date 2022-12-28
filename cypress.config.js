@@ -3,8 +3,12 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   experimentalStudio: true,
   e2e: {
+	baseUrl: 'https://checkout-staging.wheelbasepro.com/r/reserve?owner_id=28880',
 	experimentalStudio: true,
+	waitForAnimations: true,
  	testIsolation: false,
+	defaultCommandTimeout : 10000,
+	pageLoadTimeout : 20000,
 	reporter: 'cypress-mochawesome-reporter',
 	 "reporterOptions": {
    	 "reportDir": "cypress/reports",
