@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('OpenHomePage', () => {  
+    cy.visit('https://checkout-staging.wheelbasepro.com/r/reserve?owner_id=28880')
+    cy.url().should('eq', 'https://checkout-staging.wheelbasepro.com/r/reserve?owner_id=28880')      
+    })
+
+ 
